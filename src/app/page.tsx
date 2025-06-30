@@ -3,18 +3,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Menu, X, Linkedin, Github, Mail, Phone, // أيقونات Navbar والتواصل
-  CircuitBoard, GitFork, Cloud, Settings, FileText, Database, Paintbrush, Braces, Terminal, // أيقونات Skills من lucide-react المستخدمة فعلياً
-  Binary, Boxes, Waypoints // أيقونات Concepts من lucide-react المستخدمة فعلياً
+  Menu, X, Linkedin, Github, Mail, Phone, 
+  CircuitBoard, GitFork, Cloud, Settings, FileText, Database, Paintbrush, Braces, 
+  Binary, Boxes, Waypoints 
 } from "lucide-react";
-import { FaLinux, FaExchangeAlt, FaPython, FaHtml5,FaSitemap  } from "react-icons/fa"; // أيقونات Skills من react-icons/fa المستخدمة فعلياً
-import { SiCplusplus } from "react-icons/si"; // أيقونة Skills من react-icons/si المستخدمة فعلياً
+import { FaLinux, FaExchangeAlt, FaPython, FaHtml5,FaSitemap  } from "react-icons/fa"; 
+import { SiCplusplus } from "react-icons/si"; 
 import ProjectCard from "@/components/ProjectCard";
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Projects", "Contact"]; // شلت Skills من هنا بناءً على الكود اللي فات لو مش عايزها
-
+  const navItems = ["Home", "About", "Projects", "Contact"]; 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white font-sans">
       <header className="flex justify-between items-center px-6 py-4 shadow-md bg-black/30 backdrop-blur-md sticky top-0 z-50">
@@ -99,17 +98,8 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
                 "Automated data logging by exporting weather records to CSV files, enabling historical tracking and basic analytical capabilities."
               ]
             }
-            // لو عايز تضيف مشروع تالت، ضيفه هنا بنفس الطريقة:
-            // {
-            //   id: 3,
-            //   title: "Your Third Project Title",
-            //   description: [
-            //     "النقطة الأولى عن المشروع.",
-            //     "النقطة الثانية عن المشروع."
-            //   ]
-            // }
+            
           ].map(project => (
-            // هنا بنستخدم المكون ProjectCard اللي عملناه
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
@@ -119,7 +109,7 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
   <h3 className="text-3xl font-semibold mb-10 text-teal-400">Skills</h3>
 
   <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-    {/* Category 1: Programming Languages - لا يوجد تغيير هنا */}
+    {/* Category 1: Programming Languages*/}
     <div className="bg-white/5 p-6 rounded-lg shadow-xl flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
       <h4 className="text-xl font-bold text-teal-400 mb-4">Programming Languages</h4>
       <div className="grid grid-cols-2 gap-y-4 gap-x-2 w-full place-items-center">
@@ -150,11 +140,11 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
       </div>
     </div>
 
-    {/* Category 2: Technologies & Tools - التغيير هنا فقط */}
+    {/* Category 2: Technologies & Tools */}
     <div className="bg-white/5 p-6 rounded-lg shadow-xl flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
       <h4 className="text-xl font-bold text-teal-400 mb-4">Technologies & Tools</h4>
       <div className="grid grid-cols-2 gap-y-4 gap-x-2 w-full place-items-center">
-        {/* الصف الأول: Arduino و Git جنب بعض */}
+        {/*Arduino و Git */}
         <div className="flex flex-col items-center gap-1 text-gray-200">
           <CircuitBoard size={32} className="text-teal-400" />
           <span className="text-sm font-medium text-center">Arduino</span>
@@ -164,7 +154,6 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
           <span className="text-sm font-medium text-center">Git</span>
         </div>
 
-        {/* الصفوف التالية كما هي في صورتك تماماً */}
         <div className="flex flex-col items-center gap-1 text-gray-200">
           <FaLinux size={32} className="text-teal-400" />
           <span className="text-sm font-medium text-center">Linux</span>
@@ -173,9 +162,7 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
           <Database size={32} className="text-teal-400" />
           <span className="text-sm font-medium text-center">MySQL</span>
         </div>
-        {/* البلوتوث والـIR Sensors لا يوجدون في الصورة الأخيرة، لذا لن أضعهم هنا.
-            إذا أردت إضافتهم مع تنسيقهم، يرجى إخباري. */}
-
+     
         <div className="flex flex-col items-center gap-1 text-gray-200">
           <FaExchangeAlt size={32} className="text-teal-400" />
           <span className="text-sm font-medium text-center">API Integration</span>
@@ -187,28 +174,28 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
       </div>
     </div>
 
-    {/* Category 3: Concepts - لا يوجد تغيير هنا */}
+    {/* Category 3: Concepts */}
     <div className="bg-white/5 p-6 rounded-lg shadow-xl flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
       <h4 className="text-xl font-bold text-teal-400 mb-4">Concepts</h4>
       <div className="grid grid-cols-2 gap-y-4 gap-x-2 w-full place-items-center">
         <div className="flex flex-col items-center gap-1 text-gray-200">
-          <Binary size={32} className="text-teal-400" /> {/* استخدام Binary لـ Embedded Systems */}
+          <Binary size={32} className="text-teal-400" />
           <span className="text-sm font-medium text-center">Embedded Systems</span>
         </div>
         <div className="flex flex-col items-center gap-1 text-gray-200">
-          <Boxes size={32} className="text-teal-400" /> {/* استخدام Boxes لـ OOP */}
+          <Boxes size={32} className="text-teal-400" /> 
           <span className="text-sm font-medium text-center">OOP</span>
         </div>
         <div className="flex flex-col items-center gap-1 text-gray-200">
-          <FaSitemap size={32} className="text-teal-400" /> {/* استخدام FaSitemap لـ Data Structures */}
+          <FaSitemap size={32} className="text-teal-400" /> 
           <span className="text-sm font-medium text-center">Data Structures</span>
         </div>
         <div className="flex flex-col items-center gap-1 text-gray-200">
-          <Waypoints size={32} className="text-teal-400" /> {/* استخدام Waypoints لـ Algorithms */}
+          <Waypoints size={32} className="text-teal-400" />
           <span className="text-sm font-medium text-center">Algorithms</span>
         </div>
         <div className="flex flex-col items-center gap-1 text-gray-200">
-          <Settings size={32} className="text-teal-400" /> {/* PID Control */}
+          <Settings size={32} className="text-teal-400" /> 
           <span className="text-sm font-medium text-center">PID Control</span>
         </div>
         <div className="flex flex-col items-center gap-1 text-gray-200">
