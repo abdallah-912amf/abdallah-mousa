@@ -111,7 +111,7 @@ I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mec
   <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
     {/* Category 1: Programming Languages*/}
     <div className="bg-white/5 p-6 rounded-lg shadow-xl flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-      <h4 className="text-xl font-bold text-teal-400 mb-4">Programming Languages</h4>
+      <h4 className="text-xl font-bold text-teal-400 mb-4">Dev Languages</h4>
       <div className="grid grid-cols-2 gap-y-4 gap-x-2 w-full place-items-center">
         <div className="flex flex-col items-center gap-1 text-gray-200">
           <SiCplusplus size={32} className="text-teal-400" />
