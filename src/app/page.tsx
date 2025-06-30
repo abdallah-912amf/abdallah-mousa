@@ -2,16 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { SiCplusplus } from "react-icons/si"; // إضافة SiCplusplus هنا
-import { FaLinux,FaExchangeAlt,FaBoxes, FaSitemap,FaPuzzlePiece,FaPython ,FaHtml5 } from "react-icons/fa";
-// تأكد إن هذه الأيقونات موجودة لو كنت تستخدمها في أقسام أخرى غير المشاريع
 import {
-  Menu, X, Linkedin, Github, Mail, Phone,
-  Code, Terminal, Database, Paintbrush, Braces,
-  CircuitBoard, GitFork, Cloud, Settings, Bluetooth, Radar, Plug, FileText,
-  Binary, Package, Columns,Waypoints,CodeXml,SquareFunction,LayoutGrid,Boxes} from "lucide-react";
-import ProjectCard from "@/components/ProjectCard"; // استدعينا المكون الجديد هنا
-
+  Menu, X, Linkedin, Github, Mail, Phone, // أيقونات Navbar والتواصل
+  CircuitBoard, GitFork, Cloud, Settings, FileText, Database, Paintbrush, Braces, Terminal, // أيقونات Skills من lucide-react المستخدمة فعلياً
+  Binary, Boxes, Waypoints // أيقونات Concepts من lucide-react المستخدمة فعلياً
+} from "lucide-react";
+import { FaLinux, FaExchangeAlt, FaPython, FaHtml5,FaSitemap  } from "react-icons/fa"; // أيقونات Skills من react-icons/fa المستخدمة فعلياً
+import { SiCplusplus } from "react-icons/si"; // أيقونة Skills من react-icons/si المستخدمة فعلياً
+import ProjectCard from "@/components/ProjectCard";
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -57,7 +55,7 @@ export default function Portfolio() {
 
       <section id="home" className="flex flex-col items-center justify-center text-center px-6 py-24">
         <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-6xl font-extrabold mb-4">
-          Hello, I'm <span className="text-teal-400">Abdallah Mousa</span>
+          Hello, I&apos;m <span className="text-teal-400">Abdallah Mousa</span>
         </motion.h2>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="text-lg md:text-xl max-w-xl text-gray-300">
           A Mechatronics Engineering student passionate about crafting innovative software solutions and impactful digital experiences.
@@ -75,8 +73,7 @@ export default function Portfolio() {
       <section id="about" className="px-6 py-20 text-center">
         <h3 className="text-3xl font-semibold mb-4 text-teal-400">About Me</h3>
         <p className="max-w-2xl mx-auto text-gray-300">
-          I'm Abdallah Mousa, an enthusiastic Software Engineer in training and a Mechatronics Engineering student from October 6 University. My passion lies in building efficient systems and engaging web experiences, leveraging hands-on experience in C/C++ development, embedded systems, and Linux environments. I am dedicated to writing optimized, high-quality code and applying modern software development practices to real-world challenges. My goal is to gain industry experience through meaningful collaboration and make a tangible impact.
-        </p>
+I&apos;m Abdallah Mousa, an enthusiastic Software Engineer in training and a Mechatronics Engineering student from October 6 University. My passion lies in building efficient systems and engaging web experiences, leveraging hands-on experience in C/C++ development, embedded systems, and Linux environments. I&apos;m dedicated to writing optimized, high-quality code and applying modern software development practices to real-world challenges. My goal is to gain industry experience through meaningful collaboration and make a tangible impact.        </p>
       </section>
 
       <section id="projects" className="px-6 py-20 text-center">
